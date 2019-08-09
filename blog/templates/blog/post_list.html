@@ -7,8 +7,15 @@
     <div>
       <h1><a href="/">Ponyo's Blog</a></h1>
     </div>
+    {%for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
 
-    <div>
+    <!-- <div>
       <p>published: 08.08.2019, 14:52</p>
       <h2><a href="">My first post</a></h2>
       <p>Aenean eu leo quam. こんにちは！　よろしくお願いいたします! </p>
@@ -18,6 +25,6 @@
       <p>公開日: 2019/08/08, 14:55</p>
       <h2><a href="">2番目の投稿</a></h2>
       <p> こんにちは! よろしくお願いします。 </p>
-    </div>
+    </div> -->
   </body>
 </html>
